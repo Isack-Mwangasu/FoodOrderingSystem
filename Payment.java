@@ -11,6 +11,7 @@ public class payment {
     double applyDiscount(double percent) {
         double discounted = amount - (amount * percent / 100);
         System.out.println("Discount of " + percent + "% applied. New amount: KES " + discounted);
+        amount = discounted; // ← ADD THIS LINE - updates the actual amount
         return discounted;
     }
 }
