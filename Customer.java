@@ -1,21 +1,26 @@
-import java.util.List;
+package foodorder;
 
-public class Customer extends User {
-    private String address;
+import java.util.Scanner;
 
-    public Customer(String name, String email, String phone, String address) {
-        super(name, email, phone); // calls User constructor
-        this.address = address;
-    }
+public class customer extends person {
+    String address;
 
-    public String getAddress() {
-        return address;
-    }
+    void addCustomer() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Customer Registration");
+        System.out.print("Enter full name: ");
+        name = input.nextLine();
+        System.out.print("Enter email: ");
+        email = input.nextLine();
+        System.out.print("Enter phone: ");
+        phone = input.nextLine();
+        System.out.print("Enter address: ");
+        address = input.nextLine();
 
-    public void viewMenu(List<FoodItem> menu) {
-        System.out.println("\n===== MENU =====");
-        for (FoodItem item : menu) {
-            System.out.println(item);
-        }
+        System.out.println("\nCustomer Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone: " + phone);
+        System.out.println("Address: " + address);
     }
 }

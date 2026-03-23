@@ -1,9 +1,12 @@
-public class CashPayment extends Payment {
-    public CashPayment(double amount) {
-        super(amount);
+package foodorder;
+
+public class cashpayment extends payment {
+    cashpayment(double amount) {
+        this.amount = amount;
+        this.type = "Cash";
     }
 
-    public void processPayment() {
+    void processPayment() {
         System.out.println("Cash payment of KES " + amount + " received.");
     }
 }

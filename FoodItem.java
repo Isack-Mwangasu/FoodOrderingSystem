@@ -1,27 +1,13 @@
-public class FoodItem {
-    private String name;
-    private double price;
-    private boolean available;
+package foodorder;
 
-    public FoodItem(String name, double price, boolean available) {
+public class fooditem {
+    String name;
+    double price;
+    boolean available;
+
+    fooditem(String name, double price, boolean available) {
         this.name = name;
         this.price = price;
-        this.available = available;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
         this.available = available;
     }
 

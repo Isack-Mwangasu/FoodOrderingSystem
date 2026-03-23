@@ -1,14 +1,14 @@
-public abstract class Payment {
-    protected double amount;
+package foodorder;
 
-    public Payment(double amount) {
-        this.amount = amount;
+public class payment {
+    double amount;
+    String type;
+
+    void processPayment() {
+        System.out.println("Processing payment of KES " + amount);
     }
 
-    // abstract = child classes MUST implement this their own way
-    public abstract void processPayment();
-
-    public double applyDiscount(double percent) {
+    double applyDiscount(double percent) {
         double discounted = amount - (amount * percent / 100);
         System.out.println("Discount of " + percent + "% applied. New amount: KES " + discounted);
         return discounted;

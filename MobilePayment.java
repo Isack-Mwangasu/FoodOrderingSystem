@@ -1,12 +1,15 @@
-public class MobilePayment extends Payment {
-    private String phoneNumber;
+package foodorder;
 
-    public MobilePayment(double amount, String phoneNumber) {
-        super(amount);
+public class mobilepayment extends payment {
+    String phoneNumber;
+
+    mobilepayment(double amount, String phoneNumber) {
+        this.amount = amount;
         this.phoneNumber = phoneNumber;
+        this.type = "M-Pesa";
     }
 
-    public void processPayment() {
+    void processPayment() {
         System.out.println("M-Pesa payment of KES " + amount + " sent from " + phoneNumber);
     }
 }
